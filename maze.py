@@ -57,7 +57,7 @@ class Maze:
     def _animate(self):
         if self._win is not None:
             self._win.redraw()
-            time.sleep(0.05)
+            time.sleep(0.005)
 
     def break_entrance_and_exit(self):
         top_left_cell = self._cells[0][0]
@@ -174,7 +174,6 @@ class Maze:
         # Check if there is a wall between to_cell and from_cell
         # Same column
         if from_i == to_i:
-
             if from_j < to_j:
                 # From top to bottom
                 if from_cell.has_bottom_wall or to_cell.has_top_wall:
